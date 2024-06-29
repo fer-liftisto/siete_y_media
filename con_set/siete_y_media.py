@@ -1,4 +1,4 @@
-
+##   https: // youtu.be/YAIF-XsTxEU?si = Y1d3JhHRovmqzbaZ  ##
 from os import system
 
 def mi_mazo():
