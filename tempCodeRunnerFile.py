@@ -1,1 +1,0 @@
-    salir_maquina = False
