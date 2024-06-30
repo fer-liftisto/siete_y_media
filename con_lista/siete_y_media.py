@@ -9,6 +9,7 @@ def mi_mazo():
 
 def dar(mazo):
     import random
+    
     # print(dir(random))
     n_carta = random.choice(mazo) # Es una lista
     num  = n_carta[0]
@@ -22,11 +23,11 @@ def dar(mazo):
         case '10':
             num = 'Rey'
 
-    carta = (num , palo) # para devolver una tupla
+    carta = (num , palo) # para devolver una tupla con las figuras
    
-    mazo.remove(n_carta)
+    mazo.remove(n_carta) # borra la carta sin cambios
   
-    return carta, mazo
+    return carta, mazo # devuelve la carta con num cambiado y mazo sin cambiar num
 
 def comprovar(mano, total):
     mano = copy.deepcopy(mano)  # para pasarle una copia
@@ -71,7 +72,8 @@ def sieteYmedia():
         else:
             opc = input('¿pedir otra carta?: ')
             if opc == 's':       
-                carta_jugador, mazo_sin_carta = dar(mazo_sin_carta)
+                carta_jugador, mazo_sin_carta = dar(mazo_sin_carta) # carta jugador tiene cambiado el num 
+                                                                    # mazo_sin_carta no
                 
             else:
                 break
@@ -88,4 +90,4 @@ def sieteYmedia():
 ######################################################################
 if __name__ == '__main__':
     sieteYmedia()
-    print('prueba')
+    
