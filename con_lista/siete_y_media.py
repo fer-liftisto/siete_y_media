@@ -1,13 +1,15 @@
 import copy
-def mi_mazo():
-    numeros = list(range(1, 11))
+def mi_mazo(): # devuelve una lista de tuplas
+    numeros = list(range(1, 11)) 
     palos = ['Oros', 'Bastos', 'Espadas', 'Copas']
     
     mazo = [(str(num), palo) for palo in palos for num in numeros]
 
     return mazo
 
-def dar(mazo):
+
+def dar(mazo):  # devuelve la carta con num cambiado a figuras
+                # y mazo sin cambiar num
     import random
     
     # print(dir(random))
@@ -25,22 +27,23 @@ def dar(mazo):
 
     carta = (num , palo) # para devolver una tupla con las figuras
    
-    mazo.remove(n_carta) # borra la carta sin cambios
+    mazo.remove(n_carta) # borra la carta del mazo, sin figuras
   
-    return carta, mazo # devuelve la carta con num cambiado y mazo sin cambiar num
+    return carta, mazo # devuelve la carta con num cambiado a figuras
+                       # y mazo sin cambiar num
 
 def comprovar(mano, total):
-    mano = copy.deepcopy(mano)  # para pasarle una copia
-    if not mano[len(mano)-1][0].isnumeric():   
-        mano[len(mano)-1] = ('0.5', [len(mano)-1][0])
+    copia_mano = copy.deepcopy(mano)  # para pasarle una copia
+    if not copia_mano[len(copia_mano)-1][0].isnumeric():   
+        copia_mano[len(copia_mano)-1] = ('0.5', [len(copia_mano)-1][0])
                                                 
-    total += float(mano[len(mano)-1][0])
-    
+    total += float(copia_mano[len(copia_mano)-1][0])
     print(f'El total es {total}')
+    
     if total >  7.5:
         return True, total
     else:
-        return False,  total
+        return False, total
 
 #########################################################################
 def sieteYmedia():
@@ -86,7 +89,7 @@ def sieteYmedia():
                 maquina, mazo = dar(mazo)
         '''
         
-    print(mazo) #
+
 ######################################################################
 if __name__ == '__main__':
     sieteYmedia()
