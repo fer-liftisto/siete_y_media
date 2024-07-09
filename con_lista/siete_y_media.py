@@ -1,3 +1,4 @@
+##  https: // youtu.be/R40HujxUGGo?si = OYKe0gdKSISZBRY1  video GitHub ##
 import copy
 def mi_mazo(): # devuelve una lista de tuplas
     numeros = list(range(1, 11)) 

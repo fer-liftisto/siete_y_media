@@ -1,0 +1,32 @@
+
+https://youtu.be/R40HujxUGGo?si=X8pfB_dqHDA_-gc9
+https://www.atlassian.com/es/git/tutorials/git-bash
+
+CONFIGURACIÓN POR PRIMERA VEZ:  (Si quieres copia y pega los comandos, bro)
+git status
+git add .
+git commit -m "Cambios2"
+git config --global user.email "correo@gmail.com"
+git config --global user.name "nickname_github"
+git commit -m "Cambios2"
+git branch -M master
+git remote add origin "LINK DEL GITHUB!!"
+git push -u origin master
+//Le damos en abrir en el Navegador
+//Escribimos nuestras credenciales y le damos en el boton verde para que lo guarde.
+
+1era vez:
+git init 
+git status
+git add .
+git commit -m "Cambios1"
+git branch -M master
+git remote add origin https://github.com/TuNombreDeCuenta
+git push -u origin master
+
+2da vez y en adelante:
+git init
+git status
+git add .
+git commit -m "Cambios2"
+git push -u origin master
